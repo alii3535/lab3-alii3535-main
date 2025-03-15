@@ -18,8 +18,8 @@ jobs:
       uses: classroom-resources/autograding-command-grader@v1
       with:
         test-name: Test Lab 3
-        setup-command: rm *.class; javac *.java
-        command: java TileGraph
+        setup-command: rm *.class; javac -d . *.java
+        command: java Lab3Model.TileGraph
         timeout: 1
     - name: Autograding Reporter
       uses: classroom-resources/autograding-grading-reporter@v1
